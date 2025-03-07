@@ -1,0 +1,115 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: white;
+    background-size: cover, 300px;
+    color: #FFD700; /* Gold - Symbolizing wealth and power */
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 150px; /* Adjusted to prevent content from being hidden under fixed header and nav */
+    position: relative;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+    font-size: 18px;
+}
+
+nav {
+    position: fixed;
+    top: 75px; /* Lowered navigation by 50% of header height */
+    left: 0;
+    width: 100%;
+    background: #444;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav a:hover {
+    background: #555;
+}
+
+body {
+    padding-top: 140px; /* Increased to push content lower */
+}
+
+h1, h2, h3 {
+    color: #FFD700; /* Golden headings */
+    text-shadow: 2px 2px 4px black;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    font-size: 16px; /* Reduced font size */
+    margin-top: 30px; /* Increased to lower home section further */
+}
+
+.button {
+    background-color: #DAA520; /* Goldenrod - Royalty and power */
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s;
+    display: inline-block;
+    position: relative;
+}
+
+.button:hover {
+    background-color: #FF4500; /* Orange Red - Energy and passion */
+    color: white;
+    transform: translateX(10px); /* Slide to the right on hover */
+}
+
+.link {
+    color: #1E90FF; /* Dodger Blue - Spiritual balance */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link:hover {
+    color: #32CD32; /* Lime Green - Harmony and nature */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+

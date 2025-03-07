@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Cultural Awareness</title>
+    <link rel="stylesheet" href="dragon.css">
+    <style>
+        body {
+            background-image: url('My.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.8); /* Adds transparency to improve readability */
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Resources for Cultural Awareness</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="cultures.html">Cultures</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="container">
+        <h2>Resources</h2>
+        <p>Find books, articles, and videos on cultural awareness and diversity.</p>
+    </div>
+    <footer>
+        <p>&copy; 2025 Cultural Awareness. All rights reserved.</p>
+    </footer>
+    <script>
+        // Fade-in effect when the page loads
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.classList.add("loaded");
+            document.querySelector(".container").classList.add("show");
+        });
+
+        // Smooth transition when navigating to another page
+        document.querySelectorAll("nav a").forEach(link => {
+            link.addEventListener("click", function(event) {
+                event.preventDefault(); // Prevent immediate page load
+                let destination = this.href;
+
+                // Fade-out effect before changing the page
+                document.body.classList.remove("loaded");
+                setTimeout(() => {
+                    window.location.href = destination;
+                }, 500); // Adjust timing to match CSS transition
+            });
+        });
+    </script>
+</body>
+</html>

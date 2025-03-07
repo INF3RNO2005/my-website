@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Cultural Awareness</title>
+    <link rel="stylesheet" href="dragon.css">
+    <style>
+        body {
+            background-image: url('By.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: opacity 0.9s ease-in-out;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.8); /* Adds transparency to improve readability */
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Cultural Awareness</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="cultures.html">Cultures</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="container">
+        <h2>About</h2>
+        <p>Understanding different cultures helps promote harmony and mutual respect.</p>
+    </div>
+    <footer>
+        <p>&copy; 2025 Cultural Awareness. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.classList.add("loaded");
+            document.querySelector(".container").classList.add("show");
+        });
+
+        document.querySelectorAll("nav a").forEach(link => {
+            link.addEventListener("click", function(event) {
+                event.preventDefault(); 
+                let destination = this.href;
+                let newBg = this.getAttribute("data-bg");
+                
+                document.body.classList.remove("loaded");
+                
+                if (newBg) {
+                    document.querySelector(".bg-transition").style.backgroundImage = `url('${newBg}')`;
+                }
+                
+                setTimeout(() => {
+                    window.location.href = destination;
+                }, 1000); 
+            });
+        });
+    </script>
+</body>
+</html>
